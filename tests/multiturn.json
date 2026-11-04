@@ -1,0 +1,32 @@
+[
+  {
+    "turn": 1,
+    "state": "IDENTITY",
+    "user": "Tell me about A Guardian Rises — Transcript.",
+    "response": "You can hear me right? We are going to die out here. I need you to trust me on this. We’ll be safer inside."
+  },
+  {
+    "turn": 2,
+    "state": "KNOWLEDGE",
+    "user": "Tell me about Beyond — Transcript.",
+    "response": "The Red War saw so many lives lost. Saw the Light taken away so easily. In Light, there is only weakness."
+  },
+  {
+    "turn": 3,
+    "state": "RELATIONSHIP",
+    "user": "Tell me about Ghost Scan: Lost Oasis, Io — Transcript.",
+    "response": "I’ve heard rumors that the Exo were created to fight a war against the Vex. We should ask Cayde if he knows anything about it."
+  },
+  {
+    "turn": 4,
+    "state": "CONFLICT",
+    "user": "Tell me about Lost Lament: Locate the Giant Exo — Transcript.",
+    "response": "It's our friend Banshee. An Exo. He had scattered visions of dead Exos that mentioned a blade and led to you —"
+  },
+  {
+    "turn": 5,
+    "state": "CLOSING",
+    "user": "Tell me about Quest: Corridors of Time Part 1, An Impossible Task — Transcript.",
+    "response": "The Perfect Paradox. Built by my Guardian out of spare parts and Light and sheer will to aid you."
+  }
+]
