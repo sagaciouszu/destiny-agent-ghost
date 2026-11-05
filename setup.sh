@@ -19,8 +19,8 @@ elif [ -n "$SOURCE" ] && [ -d "$SOURCE" ]; then
             chmod -R u+w "$LORE" 2>/dev/null || true
             rm -rf "$LORE"
         fi
-        if command -v cmd >/dev/null 2>&1 && \
-           cmd //c mklink /J "$(cygpath -w "$LORE" 2>/dev/null || echo "$LORE")" \
+        if (command -v cmd >/dev/null 2>&1 || command -v cmd.exe >/dev/null 2>&1) && \
+           MSYS_NO_PATHCONV=1 cmd /c mklink /J "$(cygpath -w "$LORE" 2>/dev/null || echo "$LORE")" \
                               "$(cygpath -w "$SOURCE_ABS" 2>/dev/null || echo "$SOURCE_ABS")" >/dev/null 2>&1; then
             echo "junctioned $LORE -> $SOURCE_ABS"
         else
