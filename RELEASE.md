@@ -1,7 +1,7 @@
 # v0.1.1 - Windows readiness and conversation parity
 
 > **Depends On:** INDEX.md
-> **Token Estimate:** ~0.13K tokens
+> **Token Estimate:** ~0.2K tokens
 
 **2026-11-05**
 
