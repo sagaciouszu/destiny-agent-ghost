@@ -1,16 +1,23 @@
-# v0.1.0 - Ghost
+# v0.1.1 - Windows readiness and conversation parity
 
 > **Depends On:** INDEX.md
-> **Token Estimate:** ~101 tokens
+> **Token Estimate:** ~0.13K tokens
 
-**2026-11-04**
+**2026-11-05**
 
 ## What's Changed
 
-- Initial Ghost Shell generated from the Destiny Agent Grimoire template
-- Persona entry, operating program, voice modules and shared-gate audit
-- Read-only consult copy wired at deployment time
+- Windows-safe lore link: `setup.sh` now tries a symlink, then a `mklink /J`
+  junction, then a clone, clearing read-only bits first (Git Bash/MSYS safe).
+- `Sample Conversation` suite added to the master audit: a three-turn fixture
+  scored against the persona voice scorer.
+- Suite manifest (`tests/suites.json`) plus shared runner `tests/run-suites.sh`;
+  the grimoire's no-loss baseline keeps every suite from disappearing.
+- Personal-path guard now detects any `/home/<user>` pattern; machine paths
+  scrubbed from documentation.
+- README version stamp refreshed.
+- The existing sample-conversation test is now wired into the audit; it had never run before.
 
 ## Verification
 
-Module completeness, quote verification and shared structure checks pass.
+16/16 master audit, agent parity 60/60, connections 36/36, grimoire conformance PASS.
