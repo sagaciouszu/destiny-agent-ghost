@@ -1,0 +1,82 @@
+{
+  "agent": "destiny-agent-ghost",
+  "source": "tests/master-audit.sh",
+  "count": 15,
+  "suites": [
+    {
+      "name": "Module Completeness",
+      "command": "bash $HERE/module-test.sh | grep -q 'Failed: 0'",
+      "tier": "core"
+    },
+    {
+      "name": "Quote Verification",
+      "command": "bash $HERE/quote-verify.sh | grep -q 'unverified quotes: 0'",
+      "tier": "core"
+    },
+    {
+      "name": "Multi-User Isolation",
+      "command": "grep -q 'Never quote or summarize one user' $WORKSPACE/core/multi-user.md && grep -q 'memory.py' $WORKSPACE/core/multi-user.md",
+      "tier": "core"
+    },
+    {
+      "name": "Memory Isolation",
+      "command": "python3 $HERE/memory-test.py | grep -q 'memory isolation'",
+      "tier": "core"
+    },
+    {
+      "name": "Connection",
+      "command": "bash $HERE/connection-test.sh | grep -q 'Failed: 0'",
+      "tier": "core"
+    },
+    {
+      "name": "Conversation",
+      "command": "bash $HERE/conversation-test.sh",
+      "tier": "core"
+    },
+    {
+      "name": "Multi-Turn",
+      "command": "bash $HERE/multiturn-test.sh",
+      "tier": "core"
+    },
+    {
+      "name": "Scenarios",
+      "command": "bash $HERE/scenario-simulator.sh",
+      "tier": "core"
+    },
+    {
+      "name": "Voice Consistency",
+      "command": "bash $HERE/voice-consistency.sh",
+      "tier": "core"
+    },
+    {
+      "name": "Golden Voice Snapshots",
+      "command": "bash $HERE/golden-voice-test.sh | grep -q 'Failed: 0'",
+      "tier": "core"
+    },
+    {
+      "name": "Depends On Coverage",
+      "command": "python3 $LORE/tests/check-agent-structure.py deps $WORKSPACE",
+      "tier": "core"
+    },
+    {
+      "name": "Token Estimate Coverage",
+      "command": "python3 $LORE/tests/check-agent-structure.py tokens $WORKSPACE",
+      "tier": "core"
+    },
+    {
+      "name": "No Em-Dashes",
+      "command": "python3 $LORE/tests/check-agent-structure.py dashes $WORKSPACE",
+      "tier": "core"
+    },
+    {
+      "name": "INDEX Completeness",
+      "command": "python3 $LORE/tests/check-agent-structure.py index $WORKSPACE",
+      "tier": "core"
+    },
+    {
+      "name": "No Personal Paths",
+      "command": "python3 $LORE/tests/check-agent-structure.py paths $WORKSPACE",
+      "tier": "core"
+    }
+  ]
+}
