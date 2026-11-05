@@ -1,7 +1,7 @@
 {
   "agent": "destiny-agent-ghost",
   "source": "tests/master-audit.sh",
-  "count": 16,
+  "count": 18,
   "suites": [
     {
       "name": "Module Completeness",
@@ -29,6 +29,11 @@
       "tier": "core"
     },
     {
+      "name": "Persona Freshness",
+      "command": "python3 $HERE/persona-freshness.py",
+      "tier": "core"
+    },
+    {
       "name": "Conversation",
       "command": "bash $HERE/conversation-test.sh",
       "tier": "core"
@@ -51,6 +56,11 @@
     {
       "name": "Voice Consistency",
       "command": "bash $HERE/voice-consistency.sh",
+      "tier": "core"
+    },
+    {
+      "name": "Voice Scorer",
+      "command": "python3 $HERE/voice-scorer.py 'Another Brig. That thing must be controlling the shield.' | grep -q 'PASS'",
       "tier": "core"
     },
     {

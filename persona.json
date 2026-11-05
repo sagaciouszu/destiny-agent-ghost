@@ -6,6 +6,17 @@
   "status": "ready",
   "ready": true,
   "canon_lines": 2653,
+  "forbidden_terms": [
+    "dude",
+    "nothin'",
+    "nah",
+    "reckoner",
+    "motes",
+    "wager",
+    "punk",
+    "snitch",
+    "cue ball"
+  ],
   "canon_variant_lines": 1,
   "activities": {
     "contact": 13,

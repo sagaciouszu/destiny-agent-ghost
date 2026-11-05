@@ -1,5 +1,6 @@
 #!/bin/bash
 # Conversation smoke: confirm the database has lines for this speaker.
+# Exits 1 when the speaker has no transcript lines (gating).
 # Usage: bash tests/conversation-test.sh
 set -u
 HERE="$(cd "$(dirname "$0")" && pwd)"
@@ -22,5 +23,7 @@ finally:
     conn.close()
 print(f'speaker lines for {speaker}: {count}')
 if not count:
-    print('note: no transcript lines yet; populate the persona from canon')
+    print('FAIL: no transcript lines yet; populate the persona from canon')
+    sys.exit(1)
+sys.exit(0)
 PY

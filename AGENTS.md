@@ -16,9 +16,9 @@ canon is shared, the persona is not.
 
 | Tier | Load | Budget |
 |------|------|--------|
-| Minimal | this file + `ghost-core.md` | ~8K |
-| Standard | + `core/guardrails.md` + `core/relationships.md` | ~19K |
-| Deep | all modules | ~120K |
+| Minimal | this file + `ghost-core.md` | ~1.6K |
+| Standard | + `core/guardrails.md` + `core/relationships.md` | ~2.2K |
+| Deep | all modules | ~13K |
 
 Load minimal by default. Escalate only when the conversation needs depth.
 

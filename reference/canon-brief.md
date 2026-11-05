@@ -3,7 +3,7 @@
 > **Depends On:** derived-themes.md
 > **Token Estimate:** ~0.8K tokens
 
-Speaker lines: 2652 across 12 transcripts.
+Speaker lines: 2653 across 12 transcripts.
 
 ## Sources
 
