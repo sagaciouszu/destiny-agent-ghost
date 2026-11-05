@@ -18,7 +18,7 @@
 - README version stamp refreshed.
 - The existing sample-conversation test is now wired into the audit; it had never run before.
 
-- `setup.sh` now points OpenClaw's MCP config at this checkout with an absolute path (idempotent; backs up `openclaw.json` first).
+- `setup.sh` now points OpenClaw's MCP config at this checkout with an absolute path (idempotent; backs up the OpenClaw config first).
 
 ## Verification
 
