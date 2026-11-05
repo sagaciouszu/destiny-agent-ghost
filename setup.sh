@@ -9,9 +9,25 @@ SOURCE="${1:-}"
 if [ -d "$LORE" ] && [ ! -L "$LORE" ]; then
     echo "using existing $LORE"
 elif [ -n "$SOURCE" ] && [ -d "$SOURCE" ]; then
-    rm -f "$LORE"
-    ln -s "$(cd "$SOURCE" && pwd)" "$LORE"
-    echo "linked $LORE -> $SOURCE"
+    SOURCE_ABS="$(cd "$SOURCE" && pwd)"
+    ln -s "$SOURCE_ABS" "$LORE" 2>/dev/null || true
+    if [ -L "$LORE" ]; then
+        echo "linked $LORE -> $SOURCE_ABS"
+    else
+        # Windows (Git Bash): ln may copy or fail; use a junction, then clone.
+        if [ -e "$LORE" ]; then
+            chmod -R u+w "$LORE" 2>/dev/null || true
+            rm -rf "$LORE"
+        fi
+        if command -v cmd >/dev/null 2>&1 && \
+           cmd //c mklink /J "$(cygpath -w "$LORE" 2>/dev/null || echo "$LORE")" \
+                              "$(cygpath -w "$SOURCE_ABS" 2>/dev/null || echo "$SOURCE_ABS")" >/dev/null 2>&1; then
+            echo "junctioned $LORE -> $SOURCE_ABS"
+        else
+            git clone "$SOURCE_ABS" "$LORE"
+            echo "cloned $LORE from $SOURCE_ABS"
+        fi
+    fi
 elif [ -d "$LORE" ] && [ -f "$LORE/db/grimoire.db" ]; then
     echo "using existing $LORE"
 else
