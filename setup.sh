@@ -62,6 +62,12 @@ for rel in USER core/user-memory core/journal core/session-state core/cross-sess
     fi
 done
 
+# OpenClaw: give the global config an absolute grimoire MCP path (idempotent).
+if [ -f "$LORE/scripts/ensure-openclaw-mcp.sh" ]; then
+    bash "$LORE/scripts/ensure-openclaw-mcp.sh" "$LORE" \
+        || echo "warning: OpenClaw MCP config was not updated"
+fi
+
 echo
 echo "First session: ask Hunter, Titan or Warlock."
 echo "Store it: python3 memory.py prefs-set --user <platform-id> --class <class>"
