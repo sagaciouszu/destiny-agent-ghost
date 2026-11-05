@@ -1,7 +1,7 @@
 {
   "agent": "destiny-agent-ghost",
   "source": "tests/master-audit.sh",
-  "count": 15,
+  "count": 16,
   "suites": [
     {
       "name": "Module Completeness",
@@ -31,6 +31,11 @@
     {
       "name": "Conversation",
       "command": "bash $HERE/conversation-test.sh",
+      "tier": "core"
+    },
+    {
+      "name": "Sample Conversation",
+      "command": "python3 $HERE/sample-conversation-test.py",
       "tier": "core"
     },
     {

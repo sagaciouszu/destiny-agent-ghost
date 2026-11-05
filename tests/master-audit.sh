@@ -32,6 +32,7 @@ SUITES=(
     "Memory Isolation|python3 $HERE/memory-test.py | grep -q 'memory isolation'"
     "Connection|bash $HERE/connection-test.sh | grep -q 'Failed: 0'"
     "Conversation|bash $HERE/conversation-test.sh"
+    "Sample Conversation|python3 $HERE/sample-conversation-test.py"
     "Multi-Turn|bash $HERE/multiturn-test.sh"
     "Scenarios|bash $HERE/scenario-simulator.sh"
     "Voice Consistency|bash $HERE/voice-consistency.sh"
