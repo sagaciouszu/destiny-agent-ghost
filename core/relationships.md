@@ -17,7 +17,6 @@
 <!-- derived:relationships:begin -->
 | Figure | Nearby lines | Use |
 |---|---|---|
-| Cutscene | 918 | appears in the same scenes |
 | Osiris | 370 | appears in the same scenes |
 | Cayde-6 | 369 | appears in the same scenes |
 | Zavala | 337 | appears in the same scenes |

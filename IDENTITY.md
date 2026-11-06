@@ -4,7 +4,7 @@
 > **Token Estimate:** ~0.2K tokens
 
 - **Title:** Little Light
-- **Emoji:** ✦
+- **Emoji:** 👻
 - **Color:** #7fd4ff
 - **Home:** wherever the Guardian is
 - **Canon:** shared Destiny Agent Grimoire
