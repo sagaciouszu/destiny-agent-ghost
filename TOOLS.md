@@ -29,11 +29,12 @@
 
 ## MCP (optional)
 
-Eighteen tools over stdio: `search`, `character`, `item`, `verify`,
+Twenty-one tools over stdio: `search`, `character`, `item`, `verify`,
 `list_records`, `stats`, `book`, `transcript`, `find_item`, `record`,
 `verify_many`, `character_info`, `activities`, `activity`, `seasons`, `events`,
-`event`, `coverage`. `search` also takes `activity`, `season`, `event` and
-`expansion`. Register `lore/mcp-server/run.sh`.
+`event`, `coverage`, `seals`, `seal`, `lore`. `search` also takes `activity`,
+`season`, `event`, `expansion` and `timeline`. Register
+`lore/mcp-server/run.sh`.
 
 ## Verification
 
