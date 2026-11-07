@@ -1,25 +1,18 @@
-# v0.1.1 - Windows readiness and conversation parity
+# 0.1.2 - Sync with destiny-agent-grimoire v0.29.0
 
-> **Depends On:** INDEX.md
-> **Token Estimate:** ~0.2K tokens
+**2026-11-07**
 
-**2026-11-05**
+The shared lore database behind this agent is now destiny-agent-grimoire
+v0.29.0 (schema 1.5.0):
 
-## What's Changed
+- `transcript_lines` now records attribution provenance for game captions
+  (`speaker_source`: `ishtar_containment` / `dialogue_node` / `line_prefix`);
+  counts unchanged (2,422 transcripts / 78,740 lines).
+- Game captions remain excluded from persona canon (the DB predicate
+  `source_tier != 'game_caption'` holds); no persona canon changes.
+- Verification: this repo's audits green against the released DB
+  (`tests/persona-freshness.py` rc=0); main `grimoire-master-audit.sh`
+  14/14; every gate referenced by this repo unchanged.
 
-- Windows-safe lore link: `setup.sh` now tries a symlink, then a `mklink /J`
-  junction, then a clone, clearing read-only bits first (Git Bash/MSYS safe).
-- `Sample Conversation` suite added to the master audit: a three-turn fixture
-  scored against the persona voice scorer.
-- Suite manifest (`tests/suites.json`) plus shared runner `tests/run-suites.sh`;
-  the grimoire's no-loss baseline keeps every suite from disappearing.
-- Personal-path guard now detects any `/home/<user>` pattern; machine paths
-  scrubbed from documentation.
-- README version stamp refreshed.
-- The existing sample-conversation test is now wired into the audit; it had never run before.
-
-- `setup.sh` now points OpenClaw's MCP config at this checkout with an absolute path (idempotent; backs up the OpenClaw config first).
-
-## Verification
-
-16/16 master audit, agent parity 60/60, connections 36/36, grimoire conformance PASS.
+No content change. The full agent audits are run against the released
+database at each push.
