@@ -1,6 +1,6 @@
 # Ghost - Agent
 
-> **Version:** 0.1.2 | **Last updated:** 2026-11-07 | **Status:** Ready
+> **Version:** 0.1.3 | **Last updated:** 2026-11-07 | **Status:** Ready
 
 > **Depends On:** AGENTS.md
 > **Token Estimate:** ~378 tokens

@@ -1,5 +1,7 @@
-# v0.1.2 - Sync with destiny-agent-grimoire v0.29.0
+# v0.1.3 - Sync with destiny-agent-grimoire v0.29.0
 
+> **Depends On:** INDEX.md
+> **Token Estimate:** ~0.2K tokens
 **2026-11-07**
 
 The shared lore database behind this agent is now destiny-agent-grimoire
