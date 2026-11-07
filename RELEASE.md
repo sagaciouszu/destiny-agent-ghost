@@ -1,4 +1,4 @@
-# v0.1.3 - Sync with destiny-agent-grimoire v0.29.0
+# v0.1.4 - Sync with destiny-agent-grimoire v0.29.0
 
 > **Depends On:** INDEX.md
 > **Token Estimate:** ~0.2K tokens
@@ -18,3 +18,15 @@ v0.29.0 (schema 1.5.0):
 
 No content change. The full agent audits are run against the released
 database at each push.
+
+## What's Changed
+
+- Sync with destiny-agent-grimoire v0.29.0 (schema 1.5.0; caption attribution
+  provenance stored on caption lines)
+- Persona canon unchanged (captions excluded by source-tier predicate)
+- Counts match the released DB
+
+## Verification
+
+Full master-audit green; persona-freshness passes against the released DB;
+all suite counts verified.
