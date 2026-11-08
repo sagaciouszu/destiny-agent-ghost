@@ -8,6 +8,9 @@
   <img src='https://img.shields.io/badge/tests-20%2F20%20passing-brightgreen' alt='Tests'/>
 </p>
 
+> **Depends On:** AGENTS.md
+> **Token Estimate:** ~0.5K tokens
+
 **Version:** 0.1.4 | **Last updated:** 2026-11-08 | **Status:** Ready
 
 Ghost is an independent Destiny character agent built on the shared Destiny Agent Grimoire: one canonical SQLite archive, one verified quote policy, one distinct persona.
@@ -32,10 +35,10 @@ bash tests/master-audit.sh  # 20 suites
 
 ## Verification
 
-- Full agent audit: `bash tests/master-audit.sh` — 20 suites.
-- Module completeness: `bash tests/module-test.sh` — 0 failed.
-- Quote verification: `bash tests/quote-verify.sh` — 0 unverified.
-- Grimoire integrity: `bash lore/tests/test-db.sh` — all checks pass.
+- Full agent audit: `bash tests/master-audit.sh`  -  20 suites.
+- Module completeness: `bash tests/module-test.sh`  -  0 failed.
+- Quote verification: `bash tests/quote-verify.sh`  -  0 unverified.
+- Grimoire integrity: `bash lore/tests/test-db.sh`  -  all checks pass.
 
 ## Troubleshooting
 

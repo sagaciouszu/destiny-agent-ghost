@@ -41,5 +41,5 @@ Twenty-one tools over stdio: `search`, `character`, `item`, `verify`,
 - Full audit: `bash tests/master-audit.sh`
 - Module checks: `bash tests/module-test.sh`
 - Quotes: `bash tests/quote-verify.sh`
-- Database integrity: `bash lore/tests/test-db.sh` (51 checks)
+- Database integrity: `bash lore/tests/test-db.sh` (61 checks)
 - Query interface: `bash lore/tests/query-interface-test.sh` (89 checks)
