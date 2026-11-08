@@ -1,7 +1,7 @@
 {
   "agent": "destiny-agent-ghost",
   "source": "tests/master-audit.sh",
-  "count": 18,
+  "count": 20,
   "suites": [
     {
       "name": "Module Completeness",
@@ -66,6 +66,16 @@
     {
       "name": "Golden Voice Snapshots",
       "command": "bash $HERE/golden-voice-test.sh | grep -q 'Failed: 0'",
+      "tier": "core"
+    },
+    {
+      "name": "Suite Manifest",
+      "command": "python3 $HERE/suite-manifest-test.py | grep -q 'manifest matches audit'",
+      "tier": "core"
+    },
+    {
+      "name": "Shared Helpers",
+      "command": "bash $HERE/shared-helpers-test.sh | grep -q 'Passed:.*Failed: 0'",
       "tier": "core"
     },
     {

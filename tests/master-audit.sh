@@ -39,6 +39,8 @@ SUITES=(
     "Voice Consistency|bash $HERE/voice-consistency.sh"
     "Voice Scorer|python3 $HERE/voice-scorer.py 'Another Brig. That thing must be controlling the shield.' | grep -q 'PASS'"
     "Golden Voice Snapshots|bash $HERE/golden-voice-test.sh | grep -q 'Failed: 0'"
+    "Suite Manifest|python3 $HERE/suite-manifest-test.py | grep -q 'manifest matches audit'"
+    "Shared Helpers|bash $HERE/shared-helpers-test.sh | grep -q 'Passed:.*Failed: 0'"
     "Depends On Coverage|python3 $LORE/tests/check-agent-structure.py deps $WORKSPACE"
     "Token Estimate Coverage|python3 $LORE/tests/check-agent-structure.py tokens $WORKSPACE"
     "No Em-Dashes|python3 $LORE/tests/check-agent-structure.py dashes $WORKSPACE"
