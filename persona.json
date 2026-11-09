@@ -5,7 +5,7 @@
   "speaker": "Ghost",
   "status": "ready",
   "ready": true,
-  "canon_lines": 2664,
+  "canon_lines": 2690,
   "forbidden_terms": [
     "dude",
     "nothin'",
@@ -20,12 +20,12 @@
   "canon_variant_lines": 1,
   "activities": {
     "contact": 13,
-    "nightmare-hunts": 10,
-    "empire-hunts": 10,
     "deep-stone-crypt": 6,
-    "vex-offensive": 4,
+    "empire-hunts": 10,
+    "nightmare-hunts": 10,
     "the-lament": 4,
-    "the-reckoning": 2
+    "the-reckoning": 2,
+    "vex-offensive": 4
   },
   "seasons": {
     "episode-echoes": 3,
@@ -51,10 +51,10 @@
     "cutscene": 167,
     "ishtar_commons": 25,
     "ishtar_main": 36,
-    "ishtar_web": 2435,
+    "ishtar_web": 2461,
     "youtube_captions": 1
   },
-  "grimoire_version": "1.5.0",
+  "grimoire_version": "1.6.0",
   "manifest_version": "245114.26.10.13.2000-1-bnet.66137",
   "sourced_at": "2026-11-09"
 }
