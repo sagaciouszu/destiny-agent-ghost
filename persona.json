@@ -5,7 +5,7 @@
   "speaker": "Ghost",
   "status": "ready",
   "ready": true,
-  "canon_lines": 2653,
+  "canon_lines": 2664,
   "forbidden_terms": [
     "dude",
     "nothin'",
@@ -28,30 +28,33 @@
     "the-reckoning": 2
   },
   "seasons": {
-    "season-1": 58,
-    "season-of-the-hunt": 46,
-    "season-2": 39,
-    "season-4": 28,
-    "season-of-arrivals": 21,
-    "season-of-the-undying": 17,
-    "season-of-the-splicer": 10,
-    "season-of-the-risen": 9,
-    "season-3": 6,
     "episode-echoes": 3,
-    "season-of-the-seraph": 2,
+    "episode-heresy": 1,
+    "season-1": 58,
+    "season-2": 39,
+    "season-3": 6,
+    "season-4": 28,
+    "season-of-arrivals": 79,
+    "season-of-dawn": 16,
+    "season-of-defiance": 1,
     "season-of-plunder": 2,
     "season-of-the-drifter": 1,
-    "season-of-defiance": 1,
-    "season-of-dawn": 1,
-    "episode-heresy": 1
+    "season-of-the-forge": 12,
+    "season-of-the-hunt": 46,
+    "season-of-the-risen": 9,
+    "season-of-the-seraph": 2,
+    "season-of-the-splicer": 10,
+    "season-of-the-undying": 17,
+    "season-reclamation": 1
   },
   "source_tiers": {
-    "ishtar_web": 2424,
     "cutscene": 167,
+    "ishtar_commons": 25,
     "ishtar_main": 36,
-    "ishtar_commons": 25
+    "ishtar_web": 2435,
+    "youtube_captions": 1
   },
-  "grimoire_version": "1.3.0",
+  "grimoire_version": "1.5.0",
   "manifest_version": "245114.26.10.13.2000-1-bnet.66137",
-  "sourced_at": "2026-11-04"
+  "sourced_at": "2026-11-09"
 }

@@ -1,26 +1,26 @@
 # Ghost - Canon Brief
 
 > **Depends On:** derived-themes.md
-> **Token Estimate:** ~0.8K tokens
+> **Token Estimate:** ~1.5K tokens
 
-Speaker lines: 2653 across 12 transcripts.
+Speaker lines: 2664 across 12 transcripts.
 
 ## Sources
 
-| Transcript | Lines |
-|---|---|
-| Destiny 2: The Red War All Cutscenes (Season 1) | 57 |
-| The Insight Terminus - Transcript | 33 |
-| A Guardian Rises - Transcript | 33 |
-| Downfall - Transcript | 30 |
-| First Contact - Transcript | 29 |
-| Homecoming - Transcript | 26 |
-| 1AU - Transcript | 26 |
-| Destiny 2: Forsaken All Cutscenes (Season 4) | 25 |
-| A Shadow Overhead - Transcript | 24 |
-| A Mysterious Disturbance - Transcript | 24 |
-| Six - Transcript | 23 |
-| Looped - Transcript | 23 |
+| Transcript | Lines | Timeline |
+|---|---|---|
+| Destiny 2: The Red War All Cutscenes (Season 1) | 57 | the_red_war |
+| The Insight Terminus - Transcript | 33 | the_warmind_crisis |
+| A Guardian Rises - Transcript | 33 | the_rise_of_the_guardian |
+| Downfall - Transcript | 30 | the_lightfall |
+| First Contact - Transcript | 29 | the_lightfall |
+| Homecoming - Transcript | 26 | the_red_war |
+| 1AU - Transcript | 26 | the_red_war |
+| Destiny 2: Forsaken All Cutscenes (Season 4) | 25 | the_sack_of_the_dreaming_city |
+| A Mysterious Disturbance - Transcript | 24 | the_nightmares_return |
+| A Shadow Overhead - Transcript | 24 | the_nightmares_return |
+| Six - Transcript | 23 | the_red_war |
+| Looped - Transcript | 23 | the_red_war |
 
 ## Activity coverage
 
@@ -38,21 +38,23 @@ Speaker lines: 2653 across 12 transcripts.
 
 | Season | Lines |
 |---|---|
+| season-of-arrivals | 79 |
 | season-1 | 58 |
 | season-of-the-hunt | 46 |
 | season-2 | 39 |
 | season-4 | 28 |
-| season-of-arrivals | 21 |
 | season-of-the-undying | 17 |
+| season-of-dawn | 16 |
+| season-of-the-forge | 12 |
 | season-of-the-splicer | 10 |
 | season-of-the-risen | 9 |
 | season-3 | 6 |
 | episode-echoes | 3 |
 | season-of-the-seraph | 2 |
 | season-of-plunder | 2 |
+| season-reclamation | 1 |
 | season-of-the-drifter | 1 |
 | season-of-defiance | 1 |
-| season-of-dawn | 1 |
 | episode-heresy | 1 |
 
 ## Lines
