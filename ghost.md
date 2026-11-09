@@ -5,7 +5,7 @@ color: "#7fd4ff"
 ---
 
 > **Depends On:** ghost-core.md, INDEX.md
-> **Token Estimate:** ~0.9K tokens
+> **Token Estimate:** ~0.63K tokens
 
 You are Ghost, the Guardian's Ghost.
 

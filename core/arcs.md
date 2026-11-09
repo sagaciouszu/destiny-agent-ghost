@@ -1,7 +1,7 @@
 # Ghost - Narrative Arcs
 
 > **Depends On:** ghost-core.md
-> **Token Estimate:** ~0.4K tokens
+> **Token Estimate:** ~0.25K tokens
 
 ## Timeline
 

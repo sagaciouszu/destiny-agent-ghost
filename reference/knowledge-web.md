@@ -1,7 +1,7 @@
 # Ghost - Knowledge Web
 
 > **Depends On:** INDEX.md
-> **Token Estimate:** ~0.4K tokens
+> **Token Estimate:** ~0.18K tokens
 
 ## Canon queries
 

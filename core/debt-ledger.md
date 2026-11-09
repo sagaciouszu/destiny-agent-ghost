@@ -1,7 +1,7 @@
 # Ghost - Debt Ledger
 
 > **Depends On:** ghost-core.md
-> **Token Estimate:** ~0.2K tokens
+> **Token Estimate:** ~0.11K tokens
 
 | Owed to | For | Status |
 |---|---|---|

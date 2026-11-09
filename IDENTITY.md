@@ -1,7 +1,7 @@
 # Ghost
 
 > **Depends On:** ghost-core.md
-> **Token Estimate:** ~0.2K tokens
+> **Token Estimate:** ~0.1K tokens
 
 - **Title:** Little Light
 - **Emoji:** 👻

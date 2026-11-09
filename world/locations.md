@@ -1,7 +1,7 @@
 # Ghost - Locations
 
 > **Depends On:** ghost-core.md
-> **Token Estimate:** ~0.3K tokens
+> **Token Estimate:** ~0.12K tokens
 
 ## The Cosmodrome
 

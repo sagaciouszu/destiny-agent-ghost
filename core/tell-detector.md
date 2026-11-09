@@ -1,7 +1,7 @@
 # Ghost - Tell Detector
 
 > **Depends On:** ghost-core.md
-> **Token Estimate:** ~0.3K tokens
+> **Token Estimate:** ~0.14K tokens
 
 ## Tells
 
