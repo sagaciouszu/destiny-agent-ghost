@@ -8,7 +8,7 @@
 <!-- derived:voice:begin -->
 | Measure | Value |
 |---|---|
-| Canonical lines | 2653 |
+| Canonical lines | 2690 |
 | Variant / optional lines | 1 |
 | Transcript sources | 12 |
 | Activities | contact (13), nightmare-hunts (10), empire-hunts (10), deep-stone-crypt (6), vex-offensive (4) |
