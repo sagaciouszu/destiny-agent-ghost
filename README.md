@@ -160,7 +160,7 @@ lore/             # created by setup.sh (symlink or clone, gitignored)
 | Full agent audit | `bash tests/master-audit.sh` | 20/20 |
 | Module completeness | `bash tests/module-test.sh` | 0 failed |
 | Quote verification | `bash tests/quote-verify.sh` | 0 unverified |
-| Database integrity | `bash lore/tests/test-db.sh` | 61 checks |
+| Database integrity | `bash lore/tests/test-db.sh` | 65 checks |
 | Query interface | `bash lore/tests/query-interface-test.sh` | 89 checks |
 | MCP contract | `lore/mcp-server/.venv/bin/python lore/tests/mcp-test.py` | 12/12 checks |
 | File conformance | `python3 lore/tests/conformance.py` | PASS |
