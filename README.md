@@ -92,7 +92,7 @@ OpenCode, deploy with `lore/scripts/sync-live-agents.sh`: it installs
 | `sqlite3` | optional raw SQL | the query CLI uses Python's built-in driver |
 | `curl` | optional prebuilt database | falls back to a local build |
 | MCP SDK (optional) | typed tools for clients without a shell | Python 3.10+; one-time install |
-| ~500 MB disk | checkout plus built database | database is ~170 MB |
+| ~400 MB disk | checkout plus built database | database is ~300 MB |
 
 No API keys, accounts or network access are required at runtime.
 
