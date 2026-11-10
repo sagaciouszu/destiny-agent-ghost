@@ -15,6 +15,9 @@
 
 **Version:** 0.1.7 | **Last push:** 2026-11-10 | **Status:** Active
 
+**Documentation site:** <https://sagaciouszu.github.io/destiny-agent-grimoire-site/personas/ghost/>
+**Limits and provenance:** <https://sagaciouszu.github.io/destiny-agent-grimoire-site/grimoire/limits/>
+
 > **Depends On:** AGENTS.md, INDEX.md
 > **Token Estimate:** ~2.1K tokens
 
@@ -203,5 +206,5 @@ All the community projects out there are continual labors of love. Neither this
 archive nor the community around it would exist without the efforts of everyone
 who has worked on Destiny.
 
-All quotes trace to canonical transcripts and lore books; audits report zero
-unverified quotes and zero broken links.
+All shipped quotes trace to transcripts or lore books in the library; audits
+report zero unverified quotes and zero broken links.
