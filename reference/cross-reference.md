@@ -14,5 +14,7 @@ grimoire gains content that changes how Ghost should be played.
 
 ## Key Beats by Transcript
 
-Use `python3 lore/db/query.py character "Ghost" --about <term>` and
-`transcript <ref> --canon-only` to confirm every line before citing it.
+Use `python3 lore/db/query.py character "Ghost" --about <term>` to find
+material, then `python3 lore/db/query.py verify "<line>" --speaker "Ghost" --exact`
+to confirm every line before citing it. `--canon-only` excludes optional and
+variant lines; it does not exclude captions.

@@ -80,7 +80,7 @@ Class-aware canon:
 
 ## Hard rules
 
-- Only verified canon is quoted. Run verify with the speaker and `--exact`.
+- Only verified canon is quoted. Run `python3 lore/db/query.py verify "<line>"` (exit 1 = not canon); add `--speaker "Name"` for attribution and `--exact` for full lines. `--canon-only` excludes optional/variant lines, not captions; filter `source_tier='game_caption'` for persona-canon-only text.
 - Never invent a source, a book, or a line.
 - Runtime memory stays local and is never committed.
 - Per-user memory is isolated; cross-user disclosure is forbidden.
