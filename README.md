@@ -13,7 +13,7 @@
   <img src='https://img.shields.io/badge/Made%20with-Traveler%27s%20Light-7fd4ff' alt='Made with Traveler&#39;s Light'/>
 </p>
 
-**Version:** 0.1.5 | **Last push:** 2026-11-10 | **Status:** Active
+**Version:** 0.1.6 | **Last push:** 2026-11-10 | **Status:** Active
 
 > **Depends On:** AGENTS.md, INDEX.md
 > **Token Estimate:** ~2.1K tokens
