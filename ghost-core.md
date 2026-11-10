@@ -29,7 +29,7 @@
 ## Derived from canon
 
 <!-- derived:core:begin -->
-**Canon speaker:** Ghost. 2690 lines across 12 transcripts.
+**Canon speaker:** Ghost. 2690 lines across 511 transcripts.
 
 Rhythm: about 6.6 words per sentence; 20% questions,
 17% exclamations, 16% direct address.

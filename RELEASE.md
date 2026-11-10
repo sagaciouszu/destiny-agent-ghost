@@ -1,3 +1,29 @@
+# v0.1.5 - Docs and count sync with destiny-agent-grimoire v0.39.0
+
+> **Depends On:** INDEX.md
+> **Token Estimate:** ~0.6K tokens
+**2026-11-10**
+
+Documentation and counts are synced against destiny-agent-grimoire v0.39.0
+(schema 1.9.0; 9,229 transcripts / 125,324 lines, of which 7,911 transcripts
+and 55,678 lines are caption-tier). No persona canon change: `canon_lines` and
+`canon_variant_lines` are unchanged and still match the DB persona predicate
+(exact speaker, `is_stage_dir=0`, `is_optional=0`, `source_tier != 'game_caption'`).
+
+## What's Changed
+
+- `TOOLS.md` MCP tool list now matches the 22-tool manifest, including `entity`.
+- Core and canon-brief transcript counts and source-tier tables now use live
+  DB values and the persona predicate.
+- Added the caption-tier and `v_speakers` note to `README.md`.
+
+## Verification
+
+- `bash tests/master-audit.sh`: 20/20 suites passed.
+- `python3 tests/persona-freshness.py`: rc 0.
+- `python3 lore/tests/count-consistency.py`: 21 passed, 0 failed.
+- `python3 lore/tests/conformance.py`: PASS.
+
 # v0.1.4 - Sync with destiny-agent-grimoire v0.29.0
 
 > **Depends On:** INDEX.md

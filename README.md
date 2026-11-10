@@ -110,6 +110,7 @@ Load in this order:
 - Map: `INDEX.md` lists every module, tier and topic route.
 - Canon: `lore/db/grimoire.db` through `lore/` (a symlink or a clone). Never parse
   `lore/source/` at runtime.
+- Caption tiers: caption-tier text is searchable canon but never part of persona canon; `v_speakers` includes caption-only speakers.
 - Quote safety: `python3 lore/db/query.py verify "<line>"` exits 1 when the line
   is not canon. Add `--speaker "Name"` to require attribution and `--exact` to
   reject fragments. An unverified line is never quoted.

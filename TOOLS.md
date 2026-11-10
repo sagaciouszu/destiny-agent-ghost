@@ -5,7 +5,7 @@
 
 ## Query CLI
 
-- Query CLI: one of `python3 lore/db/query.py search|character|character-info|item|book|transcript|find-item|record|verify|verify-many|list|activity|event|lore|seal|seals|coverage|stats`; MCP tool names use underscores.
+- Query CLI: one of `python3 lore/db/query.py search|entity|character|character-info|item|book|transcript|find-item|record|verify|verify-many|list|activity|event|lore|seal|seals|coverage|stats`; MCP tool names use underscores.
 - Search: `python3 lore/db/query.py search "<term>" --limit 10`
 - Character lines: `python3 lore/db/query.py character "Ghost" --limit 20`
 - Quote check: `python3 lore/db/query.py verify "<line>" --speaker "Ghost" --exact`
@@ -29,10 +29,10 @@
 
 ## MCP (optional)
 
-Twenty-one tools over stdio: `search`, `character`, `item`, `verify`,
-`list_records`, `stats`, `book`, `transcript`, `find_item`, `record`,
-`verify_many`, `character_info`, `activities`, `activity`, `seasons`, `events`,
-`event`, `coverage`, `seals`, `seal`, `lore`. `search` also takes `activity`,
+Twenty-two tools over stdio: `search`, `entity`, `character`, `character_info`, `item`, `verify`,
+`verify_many`, `list_records`, `stats`, `book`, `transcript`, `find_item`, `record`,
+`seals`, `seal`, `lore`, `activities`, `activity`, `seasons`, `events`,
+`event`, `coverage`. `search` also takes `activity`,
 `season`, `event`, `expansion` and `timeline`. Register
 `lore/mcp-server/run.sh`.
 
