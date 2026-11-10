@@ -1,3 +1,22 @@
+# v0.1.6 - Access contract and knowledge-web snapshot
+
+> **Depends On:** INDEX.md
+> **Token Estimate:** ~0.7K tokens
+**2026-11-10**
+
+## What's Changed
+
+- `setup.sh`: `--dry-run`, `GRIMOIRE_DB` local database, and dangling `lore/`
+  recovery. Drifter/Eris keep their MCP and bootstrap options.
+- `reference/knowledge-web.md`: generated canon snapshot (lines, transcripts,
+  activities, seasons, chapters, source tiers and co-speakers) checked from the
+  database.
+
+## Verification
+
+- `bash tests/master-audit.sh`: 20/20.
+- `python3 lore/tests/conformance.py`: PASS.
+
 # v0.1.5 - Docs and count sync with destiny-agent-grimoire v0.39.0
 
 > **Depends On:** INDEX.md
