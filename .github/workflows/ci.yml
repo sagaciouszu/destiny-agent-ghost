@@ -31,7 +31,7 @@ jobs:
           cd lore/db && sha256sum -c /tmp/SHA256SUMS.db
 
       - name: Onboarding
-        run: ./setup.sh "$PWD/lore"
+        run: ./setup.sh --no-mcp "$PWD/lore"
 
       - name: Agent audit
         env:

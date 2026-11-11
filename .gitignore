@@ -1,19 +1,36 @@
-# Runtime memory (personal conversation data)
-USER.md
+# Runtime artifacts (dreaming data, session state)
 DREAMS.md
+
+# Runtime memory (personal conversation data; seeded from *.template.md by setup.sh)
+USER.md
 core/user-memory.md
 core/journal.md
 core/session-state.md
 core/cross-session-memory.md
-memory/
-memory/users/
 
-# Canon checkout
+# Local per-user memory
+memory/
+
+# Canon archive (symlink or clone created by setup.sh)
 lore
 
-# Local tooling
-.venv/
+# Python bytecode
 __pycache__/
 *.pyc
+.venv/
+
+# Git internals
+.git/
+
+# OS / editor artifacts
 .DS_Store
 Thumbs.db
+*.swp
+*.swo
+*~
+*.tmp
+*.bak
+*.orig
+
+# Logs
+*.log
