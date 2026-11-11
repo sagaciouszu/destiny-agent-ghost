@@ -60,7 +60,7 @@
     },
     {
       "name": "Voice Scorer",
-      "command": "python3 $HERE/voice-scorer.py 'Another Brig. That thing must be controlling the shield.' | grep -q 'PASS'",
+      "command": "python3 $HERE/voice-scorer.py 'We are picking up a signal. The Fallen are here. Must be another brig. Be careful, Guardian.' | grep -q 'PASS'",
       "tier": "core"
     },
     {
