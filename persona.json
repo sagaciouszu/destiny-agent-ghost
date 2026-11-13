@@ -54,7 +54,8 @@
     "ishtar_web": 2461,
     "youtube_captions": 1
   },
-  "grimoire_version": "1.9.0",
+  "grimoire_schema": "1.13.0",
+  "grimoire_version": "1.13.0",
   "manifest_version": "245114.26.10.13.2000-1-bnet.66137",
   "sourced_at": "2026-11-09"
 }
