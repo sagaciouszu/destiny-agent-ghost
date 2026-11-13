@@ -9,7 +9,7 @@
 |------|-------|--------|
 | Minimal | `ghost.md` + `ghost-core.md` | ~0.6K |
 | Standard | + `voice/ghost-voice-core.md` + `core/relationships.md` | ~1.1K |
-| Deep | all modules | ~13.0K |
+| Deep | all modules | ~16.3K |
 
 ## Identity
 

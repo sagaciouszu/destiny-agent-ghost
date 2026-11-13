@@ -13,7 +13,7 @@
   <img src='https://img.shields.io/badge/Made%20with-Traveler%27s%20Light-7fd4ff' alt='Made with Traveler&#39;s Light'/>
 </p>
 
-**Version:** 0.1.10 | **Last push:** 2026-11-12 | **Status:** Active
+**Version:** 0.1.10 | **Last push:** 2026-11-13 | **Status:** Active
 
 **Documentation site:** <https://sagaciouszu.github.io/destiny-agent-grimoire-site/personas/ghost/>
 **Limits and provenance:** <https://sagaciouszu.github.io/destiny-agent-grimoire-site/grimoire/limits/>
