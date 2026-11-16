@@ -7,9 +7,8 @@
 
 | Tier | Files | Budget |
 |------|-------|--------|
-| Minimal | `ghost.md` + `ghost-core.md` | ~1.3K |
-| Standard | + `voice/ghost-voice-core.md` + `core/relationships.md` | ~1.8K |
-| Deep | all modules | ~12.9K |
+| Core | `ghost.md` + `ghost-core.md` + `AGENTS.md` + `INDEX.md` (always loaded) | ~3.1K |
+| Task-loaded | everything else, loaded per task | ~12.9K ref (not gated) |
 
 ## Identity
 

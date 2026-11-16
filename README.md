@@ -106,9 +106,8 @@ Load in this order:
 
 | Tier | Files | Budget |
 |---|---|---|
-| Minimal | `ghost-core.md` | ~0.7K |
-| Standard | + `voice/ghost-voice-core.md` + `core/relationships.md` | ~1.2K |
-| Deep | all modules | ~12.9K |
+| Core | `ghost.md` + `ghost-core.md` + `AGENTS.md` + `INDEX.md` (always loaded) | ~3.1K |
+| Task-loaded | everything else, loaded per task | ~12.9K ref (not gated) |
 
 - Contract: `AGENTS.md` (platform-neutral rules, canon and quote policy).
 - Map: `INDEX.md` lists every module, tier and topic route.
