@@ -6,7 +6,8 @@
 set -e
 
 WORKSPACE="$(cd "$(dirname "$0")" && pwd)"
-LORE_URL="${LORE_URL:-https://github.com/sagaciouszu/destiny-agent-grimoire.git}"
+# Empty LORE_URL skips the clone and uses degraded mode (no canon queries).
+LORE_URL="${LORE_URL-https://github.com/sagaciouszu/destiny-agent-grimoire.git}"
 RELEASE_DB_URL="${RELEASE_DB_URL:-https://github.com/sagaciouszu/destiny-agent-grimoire/releases/latest/download/grimoire.db}"
 RELEASE_SUMS_URL="${RELEASE_SUMS_URL:-https://github.com/sagaciouszu/destiny-agent-grimoire/releases/latest/download/SHA256SUMS}"
 LORE_PATH=""
@@ -113,8 +114,12 @@ else
         fi
     elif [ -n "$LORE_URL" ]; then
         echo "Cloning lore archive from $LORE_URL ..."
-        git clone "$LORE_URL" "$WORKSPACE/lore"
-        echo "Lore archive cloned."
+        if git clone "$LORE_URL" "$WORKSPACE/lore"; then
+            echo "Lore archive cloned."
+        else
+            echo "WARNING: clone failed; continuing in degraded mode (no canon queries)."
+            echo "Retry when online, or link a local checkout: ./setup.sh /path/to/destiny-agent-grimoire"
+        fi
     else
         echo ""
         echo "The lore archive is required for full functionality."
@@ -138,6 +143,9 @@ fi
 # A local database can replace the download/build path (offline and CI).
 if [ -d "$WORKSPACE/lore" ] && [ ! -f "$WORKSPACE/lore/db/grimoire.db" ] \
    && [ -n "${GRIMOIRE_DB:-}" ] && [ -f "$GRIMOIRE_DB" ]; then
+    if [ -L "$WORKSPACE/lore" ]; then
+        echo "NOTE: lore/ is a symlink; the database will live inside the linked checkout."
+    fi
     mkdir -p "$WORKSPACE/lore/db"
     cp "$GRIMOIRE_DB" "$WORKSPACE/lore/db/grimoire.db"
     echo "Copied local database from $GRIMOIRE_DB"
@@ -146,9 +154,12 @@ fi
 # Verify
 if [ -L "$WORKSPACE/lore" ] || [ -d "$WORKSPACE/lore" ]; then
     if [ -f "$WORKSPACE/lore/db/grimoire.db" ]; then
-        STATS=$(python3 "$WORKSPACE/lore/db/query.py" stats 2>/dev/null | head -12)
-        echo "Lore archive: OK (database present)"
-        echo "$STATS"
+        if STATS=$(python3 "$WORKSPACE/lore/db/query.py" stats 2>/dev/null); then
+            echo "Lore archive: OK (database present)"
+            echo "$STATS" | head -12
+        else
+            echo "WARNING: database file present but unreadable (query failed); check the file."
+        fi
     elif [ -f "$WORKSPACE/lore/db/migrate.py" ]; then
         # Database is a build artifact (not shipped in git): bootstrap it now.
         # Agent-safe: BOOTSTRAP=1|2 env preselects (no prompt); interactive
@@ -172,10 +183,17 @@ if [ -L "$WORKSPACE/lore" ] || [ -d "$WORKSPACE/lore" ]; then
             TMP_DB="$WORKSPACE/lore/db/grimoire.db.part"
             if curl -fsSL "$RELEASE_DB_URL" -o "$TMP_DB"; then
                 VERIFIED=0
-                if command -v sha256sum >/dev/null 2>&1 && \
+                if command -v sha256sum >/dev/null 2>&1; then
+                    SHA256="sha256sum"
+                elif command -v shasum >/dev/null 2>&1; then
+                    SHA256="shasum -a 256"
+                else
+                    SHA256=""
+                fi
+                if [ -n "$SHA256" ] && \
                    curl -fsSL "$RELEASE_SUMS_URL" -o "$TMP_DB.sums" 2>/dev/null; then
                     EXPECTED=$(awk '$2=="grimoire.db"{print $1}' "$TMP_DB.sums" | head -1)
-                    ACTUAL=$(sha256sum "$TMP_DB" | awk '{print $1}')
+                    ACTUAL=$($SHA256 "$TMP_DB" | awk '{print $1}')
                     rm -f "$TMP_DB.sums"
                     [ -n "$EXPECTED" ] && [ "$EXPECTED" = "$ACTUAL" ] && VERIFIED=1
                 else
@@ -226,11 +244,15 @@ if [ -x "$WORKSPACE/lore/mcp-server/install.sh" ]; then
 fi
 
 # OpenClaw: give the global config an absolute grimoire MCP path (idempotent).
+# This runs even with --no-mcp (entry/pointer only); the venv install is separate.
 if [ -f "$WORKSPACE/lore/scripts/ensure-openclaw-mcp.sh" ]; then
+    if [ "${WITH_MCP:-0}" != "1" ]; then
+        echo "Note: OpenClaw MCP entry will still reference this checkout; run ./setup.sh --mcp to install the adapter it launches."
+    fi
     bash "$WORKSPACE/lore/scripts/ensure-openclaw-mcp.sh" "$WORKSPACE/lore" \
         || echo "warning: OpenClaw MCP config was not updated"
 fi
 
 echo ""
-echo "First session: ask Hunter, Titan or Warlock; record it in USER.md."
+echo "First session: ask Hunter, Titan or Warlock; store it with python3 memory.py prefs-set --user <id> --class <class> (USER.md is the human summary)."
 echo "Setup complete. Load INDEX.md first; it lists your load order."
