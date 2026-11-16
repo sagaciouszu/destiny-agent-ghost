@@ -1,7 +1,7 @@
 {
   "agent": "destiny-agent-ghost",
   "source": "tests/master-audit.sh",
-  "count": 20,
+  "count": 21,
   "suites": [
     {
       "name": "Module Completeness",
@@ -11,6 +11,11 @@
     {
       "name": "Quote Verification",
       "command": "bash $HERE/quote-verify.sh | grep -q 'unverified quotes: 0'",
+      "tier": "core"
+    },
+    {
+      "name": "Runtime Leak Guard (no memory in prompts)",
+      "command": "python3 $HERE/runtime-leak-guard.py",
       "tier": "core"
     },
     {

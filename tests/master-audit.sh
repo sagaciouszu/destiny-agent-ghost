@@ -28,6 +28,7 @@ run() {
 SUITES=(
     "Module Completeness|bash $HERE/module-test.sh | grep -q 'Failed: 0'"
     "Quote Verification|bash $HERE/quote-verify.sh | grep -q 'unverified quotes: 0'"
+    "Runtime Leak Guard (no memory in prompts)|python3 $HERE/runtime-leak-guard.py"
     "Multi-User Isolation|grep -q 'Never quote or summarize one user' $WORKSPACE/core/multi-user.md && grep -q 'memory.py' $WORKSPACE/core/multi-user.md"
     "Memory Isolation|python3 $HERE/memory-test.py | grep -q 'memory isolation'"
     "Connection|bash $HERE/connection-test.sh | grep -q 'Failed: 0'"
