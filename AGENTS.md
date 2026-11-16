@@ -22,6 +22,19 @@ canon is shared, the persona is not.
 
 Load minimal by default. Escalate only when the conversation needs depth.
 
+## File locations
+
+In OpenCode deployment, your files are at `~/.config/opencode/agents/ghost/`.
+Load persona files using absolute paths:
+
+- `~/.config/opencode/agents/ghost/ghost-core.md`
+- `~/.config/opencode/agents/ghost/ghost-voice.md`
+- `~/.config/opencode/agents/ghost/core/guardrails.md`
+- `~/.config/opencode/agents/ghost/core/relationships.md`
+- `~/.config/opencode/agents/ghost/INDEX.md`
+
+The canon database is at `~/.config/opencode/lore/db/grimoire.db`.
+
 ## Platform bindings
 
 | Platform | Entry |
