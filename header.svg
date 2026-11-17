@@ -76,13 +76,13 @@
     <text x="60" y="90" font-size="18" font-weight="500" fill="#000000" letter-spacing="8">[ LIGHT  ·  GUARDIAN  ·  WONDER ]</text>
     <text x="60" y="150" font-size="66" font-weight="700" fill="#000000" letter-spacing="2">GHOST</text>
     <text x="60" y="200" font-size="20" font-weight="500" fill="#000000" letter-spacing="5">AGENT BRAIN  /  WRAPPER</text>
-    <text x="62" y="230" font-size="15" font-weight="400" fill="#000000" letter-spacing="4">STAY CLOSE. I'LL KEEP WATCH.</text>
+    <text x="62" y="230" font-size="15" font-weight="400" fill="#000000" letter-spacing="4">EYES UP, GUARDIAN.</text>
   </g>
   <g font-family="'Haas Grot Disp Trial', 'Haas Grot Text Trial', sans-serif">
     <text x="60" y="90" font-size="18" font-weight="500" fill="#7dd3fc" letter-spacing="8">[ LIGHT  ·  GUARDIAN  ·  WONDER ]</text>
     <text x="60" y="150" font-size="66" font-weight="700" fill="#f0f9ff" letter-spacing="2">GHOST</text>
     <text x="60" y="200" font-size="20" font-weight="500" fill="#bae6fd" letter-spacing="5">AGENT BRAIN  /  WRAPPER</text>
-    <text x="62" y="230" font-size="15" font-weight="400" fill="#8a8a8a" letter-spacing="4">STAY CLOSE. <tspan x="228" fill="#7dd3fc">I'LL KEEP WATCH.</tspan></text>
+    <text x="62" y="230" font-size="15" font-weight="400" fill="#8a8a8a" letter-spacing="4">EYES UP, <tspan x="182" fill="#7dd3fc">GUARDIAN.</tspan></text>
   </g>
 
   <rect x="60" y="172" width="400" height="1.5" fill="url(#accentfade)"/>
