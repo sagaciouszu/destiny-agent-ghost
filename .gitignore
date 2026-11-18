@@ -34,3 +34,6 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Generated index (rebuilt by tests/build-quote-index.py)
+reference/quote-inverted-index.json

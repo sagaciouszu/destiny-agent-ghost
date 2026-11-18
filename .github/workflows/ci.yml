@@ -33,6 +33,21 @@ jobs:
       - name: Onboarding
         run: ./setup.sh --no-mcp "$PWD/lore"
 
+      - name: Shared test sync
+        run: python3 lore/tests/sync-shared-tests.sh --check
+
+      - name: Doc count sync
+        run: python3 lore/tests/sync-doc-counts.py --check
+
+      - name: README metadata sync
+        run: python3 lore/tests/sync-readme-meta.py --check
+
+      - name: Persona freshness
+        run: python3 tests/persona-freshness.py
+
+      - name: Voice consistency
+        run: bash tests/voice-consistency.sh
+
       - name: Agent audit
         env:
           WORKSPACE: ${{ github.workspace }}

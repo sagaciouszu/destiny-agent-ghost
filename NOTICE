@@ -1,12 +1,13 @@
-This project is a fan-built agent for the Destiny universe.
+Ghost - Agent Brain / Wrapper
+Copyright (c) 2026 sagaciouszu
 
-License: MIT License (c) 2026 sagaciouszu. See LICENSE.
+Original code, tests and documentation in this repository are licensed under
+the MIT License. See LICENSE.
 
-Destiny and all related content, names, characters, places, artwork and lore
-are the property of Bungie, Inc. This project is not affiliated with or
-endorsed by Bungie.
+Destiny 1 and Destiny 2 lore, text, characters, art and related intellectual
+property belong to Bungie, Inc. This is a fan-made, non-commercial project. No
+license is granted to Bungie IP, and nothing here grants rights to redistribute
+Bungie's content.
 
-Canonical text is sourced from the Destiny Agent Grimoire, which in turn cites
-Ishtar Collective and in-game/cutscene transcripts. Quote only verified canon.
-
-Generated agents inherit the same attribution requirements.
+Third-party sources retain their own terms: Ishtar Collective, Destiny Lore
+Vault, Destinypedia and the Destiny community archives.
