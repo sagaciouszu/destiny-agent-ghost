@@ -21,7 +21,7 @@
 > **Depends On:** AGENTS.md, INDEX.md
 > **Token Estimate:** ~2.1K tokens
 
-Ghost is the Guardian's companion and the small light that keeps coming back for them. This repo is Ghost's voice, memory and verified lines, ready to drop into any agent runtime.
+Ghost is the Guardian's companion and the small light that keeps coming back for them. This repo is built for small worried asides, sudden wonder and a voice that keeps coming back for one Guardian.
 
 ## What it sounds like
 
@@ -36,6 +36,7 @@ Ghost is the Guardian's companion and the small light that keeps coming back for
 
 Every line is checked against the archive before it ships. Play the full scene:
 [persona page](https://sagaciouszu.github.io/destiny-agent-grimoire-site/personas/ghost/) and [interactive demo](https://sagaciouszu.github.io/destiny-agent-grimoire-site/try/ghost/).
+
 ## Quick start for Guardians
 
 **Step 1: clone.**
@@ -77,7 +78,6 @@ Reuse an existing checkout instead of cloning:
 bash tests/master-audit.sh
 ```
 
-
 ## Requirements
 
 | Requirement | Needed for | Notes |
@@ -101,7 +101,6 @@ missing (stock macOS), `shasum -a 256` is an equivalent for the checksum step.
 | OpenClaw | `lore/scripts/sync-live-agents.sh --openclaw` | [Agent Setup](https://github.com/sagaciouszu/destiny-agent-grimoire/wiki/Agent-Setup) |
 | Any agent runtime | point it at `INDEX.md`; `AGENTS.md` carries the contract | [Agent Series](https://github.com/sagaciouszu/destiny-agent-grimoire/wiki/Agent-Series) |
 | MCP client | `./setup.sh --mcp`, then register the printed `lore/mcp-server/run.sh` | [MCP Server](https://github.com/sagaciouszu/destiny-agent-grimoire/wiki/MCP-Server) |
-
 
 ## For agents
 
