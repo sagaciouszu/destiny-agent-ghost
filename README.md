@@ -13,7 +13,7 @@
   <img src='https://img.shields.io/badge/Made%20with-Traveler%27s%20Light-7fd4ff' alt='Made with Traveler&#39;s Light'/>
 </p>
 
-**Version:** 0.1.10 | **Last push:** 2026-11-18 | **Status:** Active
+**Version:** 0.1.10 | **Last push:** 2026-11-20 | **Status:** Active
 
 **Documentation site:** <https://sagaciouszu.github.io/destiny-agent-grimoire-site/personas/ghost/>
 **Limits and provenance:** <https://sagaciouszu.github.io/destiny-agent-grimoire-site/grimoire/limits/>
@@ -21,8 +21,21 @@
 > **Depends On:** AGENTS.md, INDEX.md
 > **Token Estimate:** ~2.1K tokens
 
-Got something on the scanner. A shared canon, one distinct voice, one verified quote policy.
+Ghost is the Guardian's companion and the small light that keeps coming back for them. This repo is Ghost's voice, memory and verified lines, ready to drop into any agent runtime.
 
+## What it sounds like
+
+> **You:** We need to move.
+> **Ghost:** "I didn't bring you back just for you to die again, we have to move."
+
+> **You:** Can you fix this turret?
+> **Ghost:** "This turret's seen better days. But I can make it work."
+
+> **You:** Where's Variks?
+> **Ghost:** "Variks should be just up ahead. There! That's where Variks' signal is coming from."
+
+Every line is checked against the archive before it ships. Play the full scene:
+[persona page](https://sagaciouszu.github.io/destiny-agent-grimoire-site/personas/ghost/) and [interactive demo](https://sagaciouszu.github.io/destiny-agent-grimoire-site/try/ghost/).
 ## Quick start for Guardians
 
 **Step 1: clone.**
@@ -64,26 +77,6 @@ Reuse an existing checkout instead of cloning:
 bash tests/master-audit.sh
 ```
 
-### Optional: MCP clients
-
-The adapter ships with the Grimoire archive, so one install serves every
-agent that mounts it. Install during onboarding:
-
-```bash
-./setup.sh --mcp
-```
-
-Or after the fact with `bash lore/mcp-server/install.sh`. Use `./setup.sh --no-mcp`
-to skip the prompt, or `./setup.sh --help` for options.
-
-OpenClaw: sync with `lore/scripts/sync-live-agents.sh --openclaw` (one workspace per agent; consult agents are wired in OpenClaw config).
-
-Point your runtime at `INDEX.md` (any agent runtime) or `ghost.md` (OpenCode,
-YAML frontmatter, `mode: primary`; sync also installs a read-only `-consult` copy for peers). For
-OpenCode, deploy with `lore/scripts/sync-live-agents.sh`: it installs
-`ghost.md`, keeps companions inert under `ghost/`, keeps `lore/` outside
-`agents/` and registers this agent in `series/agents.json`. Then set
-`default_agent` to `ghost` in `~/.config/opencode/opencode.json`.
 
 ## Requirements
 
@@ -100,6 +93,16 @@ OpenCode, deploy with `lore/scripts/sync-live-agents.sh`: it installs
 No API keys, accounts or network access are required at runtime. If `sha256sum` is
 missing (stock macOS), `shasum -a 256` is an equivalent for the checksum step.
 
+## Connect it
+
+| Platform | Get running | More |
+|---|---|---|
+| OpenCode | `lore/scripts/sync-live-agents.sh`, then set `default_agent` to `ghost` in `~/.config/opencode/opencode.json` | [Agent Setup](https://github.com/sagaciouszu/destiny-agent-grimoire/wiki/Agent-Setup) |
+| OpenClaw | `lore/scripts/sync-live-agents.sh --openclaw` | [Agent Setup](https://github.com/sagaciouszu/destiny-agent-grimoire/wiki/Agent-Setup) |
+| Any agent runtime | point it at `INDEX.md`; `AGENTS.md` carries the contract | [Agent Series](https://github.com/sagaciouszu/destiny-agent-grimoire/wiki/Agent-Series) |
+| MCP client | `./setup.sh --mcp`, then register the printed `lore/mcp-server/run.sh` | [MCP Server](https://github.com/sagaciouszu/destiny-agent-grimoire/wiki/MCP-Server) |
+
+
 ## For agents
 
 Load in this order:
@@ -109,33 +112,10 @@ Load in this order:
 | Core | `ghost.md` + `ghost-core.md` + `AGENTS.md` + `INDEX.md` (always loaded) | ~3.1K |
 | Task-loaded | everything else, loaded per task | ~12.9K ref (not gated) |
 
-- Contract: `AGENTS.md` (platform-neutral rules, canon and quote policy).
-- Map: `INDEX.md` lists every module, tier and topic route.
-- Canon: `lore/db/grimoire.db` through `lore/` (a symlink or a clone). Never parse
-  `lore/source/` at runtime.
-- Caption tiers: caption-tier text is searchable canon but never part of persona canon; `v_speakers` includes caption-only speakers.
-- Quote safety: `python3 lore/db/query.py verify "<line>"` exits 1 when the line
-  is not canon. Add `--speaker "Name"` to require attribution and `--exact` to
-  reject fragments. An unverified line is never quoted.
-- Lookup: `search`, `character`, `character_info`, `item`, `book`, `transcript`,
-  `find_item`, `record`, `verify_many`, `list`, `stats` (MCP names; CLI uses
-  hyphens for `character-info`, `find-item`, `verify-many`). Every command
-  accepts `--json`; search returns snippets unless `--full`, with `--offset`/`--rank`.
-- Standard: `lore/STANDARDS.md` is the database and quote contract.
-- **MCP (optional):** `lore/mcp-server/run.sh` serves the same canon to non-shell
-  clients over local stdio. Install with `./setup.sh --mcp`; tools, limits,
-  client config and security: `lore/mcp-server/README.md`.
-- Runtime memory: `USER.md` and `core/*memory*`, `core/journal.md` are gitignored
-  and seeded from templates by `setup.sh`. They never leave the machine.
-
-Connection matrix:
-
-| From | To | Mechanism |
-|---|---|---|
-| this agent | canon | `lore/db/grimoire.db` via `lore/` (symlink or clone) |
-| `setup.sh` | canon repo | symlink or clone, then bootstrap the database |
-| runtime memory | local only | gitignored, seeded from templates |
-| verification | canon repo | `lore/tests/agent-audit.sh ghost` |
+- Contract: `AGENTS.md`; map: `INDEX.md`; canon: `lore/db/grimoire.db` through `lore/`.
+- Quote safety: `python3 lore/db/query.py verify "<line>" --speaker "Name"` exits 1 when the line is not canon. An unverified line is never quoted.
+- Runtime memory: `USER.md` and `core/*memory*`, `core/journal.md` are gitignored, seeded from templates, and never leave the machine.
+- Commands, filters and JSON output: [Query CLI](https://github.com/sagaciouszu/destiny-agent-grimoire/wiki/Query-CLI) and [Reference Commands](https://github.com/sagaciouszu/destiny-agent-grimoire/wiki/Reference-Commands).
 
 ## Repository layout
 
@@ -171,17 +151,13 @@ lore/             # created by setup.sh (symlink or clone, gitignored)
 ## Troubleshooting
 
 - **Database missing:** run `./setup.sh`, or `python3 lore/db/migrate.py`.
-- **`lore/` missing:** run `./setup.sh` (or pass a local grimoire path).
-- **Dangling `lore/` symlink:** `setup.sh` removes and recreates it.
-- **Audit says workspace unresolved:** run it through `lore/` from this
-  directory, or set `WORKSPACE=$PWD`.
-- **OpenCode does not list the agent:** rerun
-  `lore/scripts/sync-live-agents.sh`, then confirm the installed `ghost.md` and
-  `default_agent` in `opencode.json`.
-- **MCP client shows no Grimoire tools:** run `./setup.sh --mcp`, then use the
-  absolute path to `lore/mcp-server/run.sh` in the client config.
-- **Degraded mode:** without the archive the persona files still work; canon
-  queries and quote verification do not.
+- **`lore/` missing or dangling:** run `./setup.sh` (or pass a local grimoire path).
+- **Audit says workspace unresolved:** run it through `lore/`, or set `WORKSPACE=$PWD`.
+- **OpenCode does not list the agent:** rerun `lore/scripts/sync-live-agents.sh` and check `default_agent`.
+- **MCP client shows no Grimoire tools:** run `./setup.sh --mcp` and use the absolute path to `lore/mcp-server/run.sh`.
+- **Degraded mode:** persona files still work without the archive; canon queries do not.
+
+More: [Troubleshooting](https://github.com/sagaciouszu/destiny-agent-grimoire/wiki/Troubleshooting).
 
 ## License and attribution
 
