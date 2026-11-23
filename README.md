@@ -143,7 +143,7 @@ lore/             # created by setup.sh (symlink or clone, gitignored)
 | Module completeness | `bash tests/module-test.sh` | 0 failed |
 | Quote verification | `bash tests/quote-verify.sh` | 0 unverified |
 | Database integrity | `bash lore/tests/test-db.sh` | 68 checks |
-| Query interface | `bash lore/tests/query-interface-test.sh` | 98 checks |
+| Query interface | `bash lore/tests/query-interface-test.sh` | 100 checks |
 | MCP contract | `lore/mcp-server/.venv/bin/python lore/tests/mcp-test.py` | 13/13 checks |
 | File conformance | `python3 lore/tests/conformance.py` | PASS |
 
